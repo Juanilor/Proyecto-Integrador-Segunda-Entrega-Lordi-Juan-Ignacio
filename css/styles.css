@@ -110,6 +110,7 @@ body {
 
 .cards-section h1 {
   position: relative;
+  padding-bottom: 30px;
   top: 50px;
   color: var(--primaryColor);
   text-align: center;
@@ -278,7 +279,6 @@ body {
 
 .ctg-section-container {
   width: 100%;
-  padding-top: 20%;
 }
 
 .card-discount {

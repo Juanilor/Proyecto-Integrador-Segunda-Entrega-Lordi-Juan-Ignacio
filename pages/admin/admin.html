@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Admin - ZonaSport</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="navbar navbar-expand-md main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="/assets/images/Logo-deportivo.png!w700wp"
+              class="main-logo"
+            />ZonaSport <span class="text-primary text-center">WIP</span>
+          </a>
+          <div
+            class="main-navbar-toggler-btns justify-content-evenly justify-content-xl-start"
+          >
+            <a href="">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="custom-toggler-icon"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact/contact.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/register/register.html"
+                  >Registro</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/About-Us/about-us.html"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/pages/admin/admin.html"
+                  >Admin</a
+                >
+              </li>
+              <li class="nav-item d-md-none">
+                <div
+                  class="user-div d-flex w-100 justify-content-between align-items-center"
+                >
+                  <span class="user-name"> Jhon Doe </span>
+                  <div
+                    class="user-icon d-flex align-items-center justify-content-center d-md-none"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!----------------------------------------------------------------------->
+
+    <main class="container-xl">
+      <div class="row border my-4 p-3">
+        <div class="col-12 col-md-6">
+          <form class="mb-3 w-100" id="formulario-productos">
+            <div class="mb-3">
+              <label for="nombre-producto" class="form-label"
+                >Nombre del Producto</label
+              >
+              <input
+                name="nombre-producto"
+                type="text"
+                class="form-control"
+                id="nombre-producto"
+                placeholder="Whey Protein"
+                minlength="3"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="fabricante-producto" class="form-label"
+                >Fabricante del Producto</label
+              >
+              <input
+                name="fabricante-producto"
+                type="text"
+                class="form-control"
+                id="fabricante-producto"
+                placeholder="MM Supplements"
+                minlength="3"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="d-flex mb-3 gap-3">
+              <div class="w-100">
+                <label for="precio-producto" class="form-label">Precio</label>
+                <input
+                  name="precio-producto"
+                  type="number"
+                  class="form-control"
+                  id="precio-producto"
+                  placeholder="10000"
+                  max="100000"
+                  min="1"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="w-100">
+                <label for="precio-producto" class="form-label"
+                  >Categoria</label
+                >
+                <select class="form-select mx-2" name="categorias" required>
+                  <option value="creatinas">Creatinas</option>
+                  <option value="proteinas">Proteinas</option>
+                  <option value="vitaminas">Vitaminas</option>
+                  <option value="aminoacidos">Aminoácidos</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="descripcionProducto" class="form-label"
+                >Descripcion del producto</label
+              >
+              <textarea
+                name="descripcion"
+                class="form-control"
+                id="descripcionProducto"
+                rows="3"
+                required
+                minlength="8"
+                maxlength="400"
+                placeholder="Descripción del producto..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-3">
+              Agregar producto
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!--==============================Bootstrap Script===============================-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

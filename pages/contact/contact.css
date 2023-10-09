@@ -1,0 +1,17 @@
+:root {
+    --primaryColor: #fdff00;
+    --secondaryColor: #336666;
+    --tertiaryColor: #99b333;
+    --fourtColor: #fdff39;
+    --lightColor: #feff72;
+    --darkColor: #3f3f3f;
+  }
+  
+  body{
+    height: max-content ;
+  }
+
+main{
+    border: #336666 solid 3px;
+}
+

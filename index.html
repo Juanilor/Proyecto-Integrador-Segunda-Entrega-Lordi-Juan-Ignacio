@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Home - ZonaSport</title>
+  </head>
+
+  <body>
+    <!--=========================Header Area=========================================-->
+    <header class="main-header">
+      <nav class="navbar navbar-expand-md main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="/assets/images/Logo-deportivo.png!w700wp"
+              class="main-logo"
+            />ZonaSport <span class="text-primary text-center">WIP</span>
+          </a>
+          <div
+            class="main-navbar-toggler-btns justify-content-evenly justify-content-xl-start"
+          >
+            <a href="">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="custom-toggler-icon"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact/contact.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/register/register.html"
+                  >Registro</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/About-Us/about-us.html"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li class="nav-item d-md-none">
+                <div
+                  class="user-div d-flex w-100 justify-content-between align-items-center"
+                >
+                  <span class="user-name"> Jhon Doe </span>
+                  <div
+                    class="user-icon d-flex align-items-center justify-content-center d-md-none"
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==============================End Header Area================================-->
+
+    <!--==============================Start Main Area================================-->
+    <main>
+      <!--==============================Carousel Area ====================================-->
+      <div
+        id="carouselArea"
+        class="carousel slide carousel-fade main-carousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2500">
+            <div class="main-carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+              <h1>Bienvenidos a ZonaSport!</h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2500">
+            <div class="main-carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+              <h1>
+                Aumenta tu rendimiento <br />
+                Mejora tu vida
+              </h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2500">
+            <div class="main-carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+              <h1>
+                Un lugar de confianza y <br />
+                salud para tu cuerpo!
+              </h1>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselArea"
+          data-bs-slide="prev"
+        ></button>
+        <button
+          class="carousel-control-next carousel-btn"
+          type="button"
+          data-bs-target="#carouselArea"
+          data-bs-slide="next"
+        ></button>
+      </div>
+      <!--==============================End Carousel Area ====================================-->
+
+      <!--==============================Categories Area================================-->
+
+      <div class="categories-main w-100 text-center">
+        <a
+          class="btn btn-categories"
+          data-bs-toggle="collapse"
+          href="#categories-collapse"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseCategories"
+        >
+          Categorias
+        </a>
+        <div class="collapse" id="categories-collapse">
+          <div class="card card-body">
+            <ul class="list-group list-group-horizontal-md">
+              <li
+                class="nav-item list-group-item"
+                aria-current="true"
+                role="button"
+              >
+                <a
+                  class="nav-link p-1 rounded px-5"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#creatinas-collapse"
+                  aria-controls="collapseCategories"
+                  href="#creatinas-collapse"
+                  aria-expanded="false"
+                  >Nutricion Deportiva</a
+                >
+                <ul class="collapse list-group" id="creatinas-collapse">
+                  <li class="nav-item list-group-item">
+                    <a class="nav-link p-1 rounded" href="#nd-crea"
+                      >Creatinas</a
+                    >
+                  </li>
+                  <li class="nav-item list-group-item">
+                    <a class="nav-link p-1 rounded" href="#nd-quem"
+                      >Quemadores</a
+                    >
+                  </li>
+                  <li class="nav-item list-group-item">
+                    <a class="nav-link p-1 rounded" href="#nd-vita"
+                      >Vitaminas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="nav-item list-group-item border-none"
+                aria-current="true"
+              >
+                <a
+                  class="nav-link p-1 rounded px-5 mx-3 text-center"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#proteinas-collapse"
+                  aria-controls="collapseCategories"
+                  href="#proteinas-collapse"
+                  aria-expanded="true"
+                  >Proteinas</a
+                >
+                <ul class="collapse list-group" id="proteinas-collapse">
+                  <li class="nav-item list-group-item border-none">
+                    <a class="nav-link p-1 rounded" href="#prot-sue"
+                      >Proteinas de Suero</a
+                    >
+                  </li>
+                  <li class="nav-item list-group-item">
+                    <a class="nav-link p-1 rounded" href="#prot-veg">Veggies</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--==============================End Categories Area================================-->
+
+      <!--                                             -->
+
+      <!--==============================Carousel Destacados Area================================-->
+
+      <section class="products-card">
+        <div
+          id="carouselProducts"
+          class="carousel slide carousel-fade products-card-carousel"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active" data-bs-interval="350">
+              <div
+                class="custom-card custom-card-scale d-flex flex-column flex-md-row"
+                data-bs-interval="12350"
+              >
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-75"
+                    >Descuento 75%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>CREATINA MONOHIDRATO 200 - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1 flex-grow">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-md-evenly justify-content-around mt-3"
+                  >
+                    <div class="card-main-btns mx-md-3">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4 mx-md-3">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item d-flex flex-wrap"
+              data-bs-interval="12350"
+            >
+              <div
+                class="custom-card custom-card-scale d-flex flex-column flex-md-row"
+              >
+                <div class="card-header d-flex">
+                  <span class="card-discount">Descuento 30%</span>
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>CREATINA (CREAPURE®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1 flex-grow">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-around justify-content-md-evenly mt-3"
+                  >
+                    <div class="card-main-btns mx-md-3">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4 mx-md-3">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item d-flex flex-wrap"
+              data-bs-interval="12350"
+            >
+              <div
+                class="custom-card custom-card-scale d-flex flex-column flex-md-row"
+              >
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/100-whey-gold-standard-5-lb-23kg.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>100% WHEY GOLD STANDARD - 5 LB (2,27KG)</h2>
+                    <span class="w-100">Optimum Nutrition</span>
+                    <p class="p-1 flex-grow">
+                      Whey Gold Standard de Optimum Nutrition es un suplemento
+                      de concentrado de suero de proteína de alta calidad. Las
+                      proteínas de Optimum Nutrition, contribuyen a que aumente
+                      la masa muscular y conservarla.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-around justify-content-md-evenly mt-3"
+                  >
+                    <div class="card-main-btns mx-md-3">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4 mx-md-3">$7500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item d-flex flex-wrap"
+              data-bs-interval="12350"
+            >
+              <div
+                class="custom-card custom-card-scale d-flex flex-column flex-md-row"
+                data-bs-interval="12350"
+              >
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/vegefiit-protein.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>VEGEFIIT PROTEIN - 2KG</h2>
+                    <span class="text-center w-100"
+                      >Amix GreenDay | Proteína Veggie
+                    </span>
+                    <p class="p-1">
+                      Vegefiit Protein de Greenday Amix es un fantástico
+                      complemento nutricional desarrollado a base de proteína
+                      vegetal de máxima calidad, este excelente producto es
+                      esencial al momento de favorecer el desarrollo muscular y
+                      el rendimiento físico de atletas y deportistas gracias a
+                      la gran cantidad de nutrientes y aminoácidos que aporta su
+                      novedosa formulación.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-md-evenly justify-content-around mt-3"
+                  >
+                    <div class="card-main-btns mx-md-3">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4 mx-md-3">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev carousel-btn w-50"
+            type="button"
+            data-bs-target="#carouselProducts"
+            data-bs-slide="prev"
+          >
+            <i class="fa-solid fa-angles-left left-icon"></i>
+          </button>
+          <button
+            class="carousel-control-next carousel-btn w-50"
+            type="button"
+            data-bs-target="#carouselProducts"
+            data-bs-slide="next"
+          >
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </div>
+      </section>
+      <!--==============================End Carousel Destacados Area================================-->
+      <!--============================== Contenedor Main Area-->
+      <div class="main-container my-0">
+        <section class="cards-section p-3 pb-0 mx-0" id="creatinas">
+          <h1 class="text">Nutricion Deportiva</h1>
+          <div class="ctg-section-container" id="nd-crea">
+            <h4 class="section-subtitle text-center mx-auto">Creatinas</h4>
+            <div
+              class="container-fluid d-flex py-3 justify-content-start row mx-0"
+            >
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount">Descuento 30%</span>
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina (Creapure®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div
+                      class="card-main-btns w-100 flex-grow align-items-center"
+                    >
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4 flex-grow">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-75"
+                    >Descuento 75%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina monohidrato 200 mesh - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina (Creapure®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina monohidrato 200 mesh - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-75"
+                    >Descuento 30%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina (Creapure®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina monohidrato 200 mesh - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-75"
+                    >Descuento 30%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina (Creapure®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina monohidrato 200 mesh - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ctg-section-container" id="nd-quem">
+            <h4 class="section-subtitle text-center mx-auto">Quemadores</h4>
+            <div
+              class="container-fluid d-flex py-3 justify-content-start row mx-0"
+            >
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount">Descuento 30%</span>
+                  <i class="fa-regular fa-heart"></i>
+                  <img src="/assets/images/Quemadores/l-carnitina.png" alt="suplemento deportivo"/>
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>L-CARNITINA 3.0 2000 MG</h2>
+                    <span class="text-center w-100"
+                      >MM Supplements | L-Carnitina</span
+                    >
+                    <p class="p-1">
+                      L-Carnitina 3.0 de MASmusculo Supplements, es un
+                      complemento alimenticio compuesto por una fórmula a base
+                      de l-carnitina de óptima calidad y rápida absorción.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">2800</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Quemadores/carni-pump-instant.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>CARNI PUMP INSTANT 3000</h2>
+                    <span class="text-center w-100">
+                      Bull Sport Nutrition | L-Carnitina</span
+                    >
+                    <p class="p-1">
+                      Carni Pump Instant 3000 de Bull Sport Nutrition es un
+                      complemento alimenticio que ofrece L-carnitina y
+                      L-arginina, dos aminoácidos indispensables para respaldar
+                      la capacidad física durante el entrenamiento.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-creapure.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina (Creapure®) - 300g</h2>
+                    <span class="text-center w-100">MM Supplements</span>
+                    <p class="p-1">
+                      Creatina (Creapure®) de MASmusculo Supplements. Esta
+                      fórmula avanzada te ofrece el impulso necesario para
+                      alcanzar tus metas deportivas. Descubre cómo este
+                      complemento alimenticio de creatina monohidrato.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Creatinas/creatina-monohidrato.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>Creatina monohidrato 200 mesh - 500G</h2>
+                    <span class="text-center w-100">Iron Addict Labs</span>
+                    <p class="p-1">
+                      100% Creatina Monohidrato 200 Mesh de Iron Addict Labs es
+                      un complemento alimenticio elaborado a base de 100%
+                      creatina monohidrato sin aditivos ni componentes
+                      artificiales.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$2900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cards-section p-3 pb-0 mx-0" id="proteinas">
+          <h1>Proteinas</h1>
+          <div id="prot-sue" class="ctg-section-container">
+            <h4 class="section-subtitle text-center mx-auto">
+              Proteinas de Suero
+            </h4>
+            <div
+              class="container-fluid d-flex py-3 justify-content-start row mx-0"
+            >
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/100-whey-gold-standard-5-lb-23kg.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>WHEY GOLD STANDARD 2KG</h2>
+                    <span class="w-100">Optimum Nutrition</span>
+                    <p class="p-1">
+                      Whey Gold Standard de Optimum Nutrition es un suplemento
+                      de concentrado de suero de proteína de alta calidad. Las
+                      proteínas de Optimum Nutrition, contribuyen a que aumente
+                      la masa muscular y conservarla.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-around mt-3"
+                  >
+                    <div class="card-main-btns">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$7500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/whey-protein80-2-kg.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>WHEY PROTEIN80 - 2KG</h2>
+                    <span class="text-center w-100"
+                      >MM Supplements | Whey Protein</span
+                    >
+                    <p class="p-1">
+                      Whey Protein80 de MM Supplements es un producto
+                      alimenticio a base de proteína de suero de leche
+                      ultrafiltrado, enriquecido además con aislado de suero de
+                      leche, de la mejor materia prima Lacprodan® de Arla Foods,
+                      que aporta más de 22 gramos de proteína por servicio.
+                      Gracias a su procesado a baja temperatura, se asegura que
+                      el producto contenga la mayor cantidad de sus cualidades
+                      nutritivas, intactas.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$7900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/100-whey-gold-standard-5-lb-23kg.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>WHEY GOLD STANDARD 2KG</h2>
+                    <span class="w-100">Optimum Nutrition</span>
+                    <p class="p-1">
+                      Whey Gold Standard de Optimum Nutrition es un suplemento
+                      de concentrado de suero de proteína de alta calidad. Las
+                      proteínas de Optimum Nutrition, contribuyen a que aumente
+                      la masa muscular y conservarla.
+                    </p>
+                  </div>
+                  <div
+                    class="card-footer w-100 d-flex justify-content-around mt-3"
+                  >
+                    <div class="card-main-btns">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$3500</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/whey-protein80-2-kg.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>WHEY PROTEIN80 - 2KG</h2>
+                    <span class="text-center w-100"
+                      >MM Supplements | Whey Protein</span
+                    >
+                    <p class="p-1">
+                      Whey Protein80 de MM Supplements es un producto
+                      alimenticio a base de proteína de suero de leche
+                      ultrafiltrado, enriquecido además con aislado de suero de
+                      leche, de la mejor materia prima Lacprodan® de Arla Foods,
+                      que aporta más de 22 gramos de proteína por servicio.
+                      Gracias a su procesado a baja temperatura, se asegura que
+                      el producto contenga la mayor cantidad de sus cualidades
+                      nutritivas, intactas.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$7900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ctg-section-container" id="prot-veg">
+            <h4 class="section-subtitle text-center mx-auto">
+              Proteinas Veggie
+            </h4>
+            <div
+              class="container-fluid d-flex py-3 justify-content-start row mx-0"
+            >
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/vegefiit-protein.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>VEGEFIIT PROTEIN - 2KG</h2>
+                    <span class="text-center w-100"
+                      >Amix GreenDay | Proteína Veggie
+                    </span>
+                    <p class="p-1">
+                      Vegefiit Protein de Greenday Amix es un fantástico
+                      complemento nutricional desarrollado a base de proteína
+                      vegetal de máxima calidad, este excelente producto es
+                      esencial al momento de favorecer el desarrollo muscular y
+                      el rendimiento físico de atletas y deportistas gracias a
+                      la gran cantidad de nutrientes y aminoácidos que aporta su
+                      novedosa formulación.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/vegefiit-protein.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>VEGEFIIT PROTEIN - 2KG</h2>
+                    <span class="text-center w-100"
+                      >Amix GreenDay | Proteína Veggie
+                    </span>
+                    <p class="p-1">
+                      Vegefiit Protein de Greenday Amix es un fantástico
+                      complemento nutricional desarrollado a base de proteína
+                      vegetal de máxima calidad, este excelente producto es
+                      esencial al momento de favorecer el desarrollo muscular y
+                      el rendimiento físico de atletas y deportistas gracias a
+                      la gran cantidad de nutrientes y aminoácidos que aporta su
+                      novedosa formulación.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/vegefiit-protein.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>VEGEFIIT PROTEIN - 2KG</h2>
+                    <span class="text-center w-100"
+                      >Amix GreenDay | Proteína Veggie
+                    </span>
+                    <p class="p-1">
+                      Vegefiit Protein de Greenday Amix es un fantástico
+                      complemento nutricional desarrollado a base de proteína
+                      vegetal de máxima calidad, este excelente producto es
+                      esencial al momento de favorecer el desarrollo muscular y
+                      el rendimiento físico de atletas y deportistas gracias a
+                      la gran cantidad de nutrientes y aminoácidos que aporta su
+                      novedosa formulación.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-card">
+                <div class="card-header d-flex">
+                  <span class="card-discount card-discount-10"
+                    >Descuento 10%</span
+                  >
+                  <i class="fa-regular fa-heart"></i>
+                  <img
+                    src="/assets/images/Proteinas/vegefiit-protein.png"
+                    alt="suplemento deportivo"
+                  />
+                </div>
+                <div class="card-main">
+                  <div class="card-main-info">
+                    <h2>VEGEFIIT PROTEIN - 2KG</h2>
+                    <span class="text-center w-100"
+                      >Amix GreenDay | Proteína Veggie
+                    </span>
+                    <p class="p-1">
+                      Vegefiit Protein de Greenday Amix es un fantástico
+                      complemento nutricional desarrollado a base de proteína
+                      vegetal de máxima calidad, este excelente producto es
+                      esencial al momento de favorecer el desarrollo muscular y
+                      el rendimiento físico de atletas y deportistas gracias a
+                      la gran cantidad de nutrientes y aminoácidos que aporta su
+                      novedosa formulación.
+                    </p>
+                  </div>
+                  <div class="card-footer w-100 d-flex px-3 mt-3">
+                    <div class="card-main-btns w-100">
+                      <div class="btn btn-sm btn-outline-dark">COMPRAR</div>
+                    </div>
+                    <span>
+                      <h1 class="h4">$4900</h1>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="prefooter-section flex-md-nowrap">
+          <div class="box">
+            <div class="icon-box">
+              <i class="fa-solid fa-truck text-center"></i>
+              <span>Envios dentro de las primeras 48hs.</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon-box">
+              <i class="fa-solid fa-headset"></i>
+              <span>Servicio al Cliente las 24hs.</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon-box">
+              <i class="fa-solid fa-boxes-packing"></i>
+              <span>Empaquetado de seguridad</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--================================ End Contenedor Main Area-->
+    <!--================================ End  Main Area-->
+    <!--================================ Footer Area ============-->
+
+    <footer class="w-100 my-0">
+      <section class="prefooter-section flex-md-nowrap">
+        <div class="box">
+          <div class="icon-box d-flex flex-row flex-wrap">
+            <span class="flex-grow">Nuestras Redes</span>
+            <a href="">
+              <i class="fa-brands fa-instagram mx-1"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-facebook mx-1"></i>
+            </a>
+            <a href=""> <i class="fa-brands fa-twitter mx-1"></i> </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon-box">
+            <span>Horarios de Disponibilidad.</span>
+            <span>9:30hs a 17hs.</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon-box">
+            <i class="fa-regular fa-copyright"></i>
+            <span>Copyright 2023 ZonaSport S.A </span>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--==============================Bootstrap Script===============================-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

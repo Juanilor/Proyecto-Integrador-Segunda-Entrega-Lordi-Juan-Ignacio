@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/pages/register/register.css" />
+    <title>Register - ZonaSport</title>
+  </head>
+  <body>
+
+      <!--================================ Header Area ============-->
+    <header class="main-header">
+      <nav class="navbar navbar-expand-md main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="/assets/images/Logo-deportivo.png!w700wp"
+              class="main-logo"
+            />ZonaSport <span class="text-primary text-center">WIP</span>
+          </a>
+          <div
+            class="main-navbar-toggler-btns justify-content-evenly justify-content-xl-start"
+          >
+            <a href="">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="custom-toggler-icon"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/contact/contact.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/pages/register/register.html"
+                  >Registro</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/About-Us/about-us.html"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li class="nav-item d-md-none">
+                <div class="user-div d-flex w-100 justify-content-between align-items-center">
+                  <span class="user-name ">
+                    Jhon Doe
+                  </span>
+                  <div class="user-icon d-flex align-items-center justify-content-center d-md-none">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <!--================================ End Header Area ============-->
+
+
+        <!--================================ Main Area ============-->
+    <main>
+      <div class="contact-form-container d-flex justify-content-center w-100">
+        <div class="main-container contact-main-container px-0 w-75 mx-auto">
+          <h4 class="text-center w-100 mb-4 mt-4">Formulario de Registro</h4>
+          <form
+            action=""
+            class="w-100 "
+          >
+            <div class="input-box">
+              <div class="text-center pt-3 input-box">
+                <label for="inputName" class="col-form-label">Nombre</label>
+              </div>
+              <div class="w-md-50 mx-auto input-container ">
+                <input
+                  type="text"
+                  id="inputName"
+                  class="form-control"
+                  placeholder="Ingrese su Nombre"
+                  aria-describedby="textHelpInline"
+                  minlength="5"
+                  maxlength="25"
+                  required
+                />
+              </div>
+            </div>
+            <div class="input-box">
+              <div class="text-center pt-3 input-box">
+                <label for="inputLastName" class="col-form-label">Apellido</label>
+              </div>
+              <div class="w-md-50 mx-auto input-container ">
+                <input
+                  type="text"
+                  id="inputLastName"
+                  class="form-control"
+                  placeholder="Ingrese su Apellido"
+                  aria-describedby="textHelpInline"
+                  minlength="5"
+                  maxlength="25"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <div class="input-box">
+              <div class="text-center pt-3 input-box ">
+                <label for="inputEmail" class="col-form-label"
+                  >Correo Electronico</label
+                >
+              </div>
+              <div class="w-md-50 mx-auto input-container ">
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control"
+                  placeholder="Ingrese su Email"
+                  aria-describedby="textHelpInline"
+                  minlength="5"
+                  maxlength="25"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-box">
+              <div class="text-center pt-3 input-box w-50">
+                <label for="inputPassword" class="col-form-label"
+                  >Contraseña</label
+                >
+              </div>
+              <div class="w-md-50 mx-auto input-container ">
+                <input
+                  type="password"
+                  id="inputPassword"
+                  class="form-control"
+                  placeholder="Ingrese su Contraseña"
+                  aria-describedby="textHelpInline"
+                  minlength="5"
+                  maxlength="25"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-box">
+              <div class="text-center pt-3 input-box ">
+                <label for="inputRepeatPassword" class="col-form-label"
+                  >Repetir Contraseña</label
+                >
+              </div>
+              <div class="w-md-50 mx-auto input-container ">
+                <input
+                  type="password"
+                  id="inputRepeatPassword"
+                  class="form-control"
+                  placeholder="Repita su Contraseña"
+                  aria-describedby="textHelpInline"
+                  minlength="5"
+                  maxlength="25"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-box d-flex align-items-center flex-column">
+              <div class="text-center pt-3 input-box my-2">
+                <label for="inputBird" class="col-form-labe w-100"
+                  >Fecha de Nacimiento</label
+                >
+              </div>
+              <div class=" mx-auto text-secondary .input-container ">
+                <input
+                  type="date"
+                  id="inputBirtday"
+                  class="form-control"
+                  min="1950-08-28"
+                  max="2023-08-28"
+                  maxlength="25"
+                  required
+                />
+              </div>
+
+            </div>
+
+            <div class="input-box ">
+              <div class="text-center pt-3 input-box">
+                <label for="provincias-select" class="col-form-label"
+                  >Selecione su Provincia</label
+                >
+              </div>
+              <div class="w-md-50 mx-auto text-secondary">
+                <select
+                  name="provincias-select"
+                  id="provincias-select"
+                  class="form-select"
+                >
+                  <option value="santa-fe" selected>Provincias</option>
+                  <option value="buenos-aires">Buenos Aires</option>
+                  <option value="santa-fe">Catamarca</option>
+                  <option value="santa-fe">Chaco</option>
+                  <option value="santa-fe">Chubut</option>
+                  <option value="santa-fe">Cordoba</option>
+                  <option value="santa-fe">Corrientes</option>
+                  <option value="santa-fe">Entre Rios</option>
+                  <option value="santa-fe">Formosa</option>
+                  <option value="santa-fe">Jujui</option>
+                  <option value="santa-fe">La Pampa</option>
+                  <option value="santa-fe">La Rioja</option>
+                  <option value="santa-fe">Mendoza</option>
+                  <option value="santa-fe">Misiones</option>
+                  <option value="santa-fe">Neuquen</option>
+                  <option value="santa-fe">Rio Negro</option>
+                  <option value="santa-fe">Salta</option>
+                  <option value="santa-fe">San Juan</option>
+                  <option value="santa-fe">San Luis</option>
+                  <option value="santa-fe">Santa Cruz</option>
+                  <option value="santa-fe">Santa Fe</option>
+                  <option value="santa-fe">Santiago Del Estero</option>
+                  <option value="santa-fe">Tierra Del Fuego</option>
+                  <option value="santa-fe">Tucuman</option>
+                </select>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn custom-btn mb-3">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+      <!--================================ End Main Area ============-->
+
+    
+    <!--================================ Footer Area ============-->
+    <footer class="w-100 my-0">
+      <section class="prefooter-section flex-md-nowrap">
+        <div class="box">
+          <div class="icon-box d-flex flex-row flex-wrap">
+            <span class="flex-grow">Nuestras Redes</span>
+            <a href="">
+              <i class="fa-brands fa-instagram mx-1"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-facebook mx-1"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-twitter mx-1"></i> </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon-box">
+            <span>Horarios de Disponibilidad.</span>
+            <span>9:30hs a 17hs.</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon-box">
+            <i class="fa-regular fa-copyright"></i>
+            <span>Copyright 2023 ZonaSport S.A </span>
+          </div>
+        </div>
+      </section>
+    </footer>
+    
+    <!--================================End Footer Area ============-->
+    
+    
+    
+    <!--==============================Bootstrap Script===============================-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+:root {
+    --primaryColor: #fdff00;
+    --secondaryColor: #336666;
+    --tertiaryColor: #99b333;
+    --fourtColor: #fdff39;
+    --lightColor: #feff72;
+    --darkColor: #3f3f3f;
+  }
+
+
+
+.about-us-main{
+    background-color: var(--darkColor); 
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.about-us-description{
+    width: 80%;
+    border: 2px solid var(--fourtColor);
+    padding: 20px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px whitesmoke;
+}
+
+.about-us-description img{
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 150px ;
+    height: 150px;
+    object-fit: cover;
+}
+
+.about-us-description h4{
+    border-bottom: 2px solid var(--fourtColor);
+}

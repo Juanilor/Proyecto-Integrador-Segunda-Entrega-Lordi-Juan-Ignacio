@@ -55,7 +55,7 @@
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/pages/contact/contact.html"
@@ -73,7 +73,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/pages/admin/admin.html"
+                <a class="nav-link active" href="/pages/Admin/admin.html"
                   >Admin</a
                 >
               </li>
@@ -100,13 +100,13 @@
     <main class="container-xl">
       <div class="row border my-4 p-3">
         <div class="col-12 col-md-6">
-          <form class="mb-3 w-100" id="formulario-productos">
+          <form class="mb-3 w-100" id="formularioProductos">
             <div class="mb-3">
-              <label for="nombre-producto" class="form-label"
+              <label for="nombreProducto" class="form-label"
                 >Nombre del Producto</label
               >
               <input
-                name="nombre-producto"
+                name="nombreProducto"
                 type="text"
                 class="form-control"
                 id="nombre-producto"
@@ -117,11 +117,11 @@
               />
             </div>
             <div class="mb-3">
-              <label for="fabricante-producto" class="form-label"
+              <label for="fabricanteProducto" class="form-label"
                 >Fabricante del Producto</label
               >
               <input
-                name="fabricante-producto"
+                name="fabricanteProducto"
                 type="text"
                 class="form-control"
                 id="fabricante-producto"
@@ -133,12 +133,12 @@
             </div>
             <div class="d-flex mb-3 gap-3">
               <div class="w-100">
-                <label for="precio-producto" class="form-label">Precio</label>
+                <label for="precioProducto" class="form-label">Precio</label>
                 <input
-                  name="precio-producto"
+                  name="precioProducto"
                   type="number"
                   class="form-control"
-                  id="precio-producto"
+                  id="precioProducto"
                   placeholder="10000"
                   max="100000"
                   min="1"
@@ -147,14 +147,19 @@
                 />
               </div>
               <div class="w-100">
-                <label for="precio-producto" class="form-label"
+                <label for="categoriaProducto" class="form-label"
                   >Categoria</label
                 >
-                <select class="form-select mx-2" name="categorias" required>
-                  <option value="creatinas">Creatinas</option>
-                  <option value="proteinas">Proteinas</option>
-                  <option value="vitaminas">Vitaminas</option>
-                  <option value="aminoacidos">Aminoácidos</option>
+                <select
+                  class="form-select mx-2"
+                  name="categorias"
+                  id="categoriaProducto"
+                  required
+                >
+                  <option value="Creatinas">Creatinas</option>
+                  <option value="Proteinas">Proteinas</option>
+                  <option value="Vitaminas">Vitaminas</option>
+                  <option value="Aminoacidos">Aminoácidos</option>
                 </select>
               </div>
             </div>
@@ -179,6 +184,20 @@
             </button>
           </form>
         </div>
+        <div class="col-12 col-md-6">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Imagen</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
       </div>
     </main>
 
@@ -188,5 +207,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="/pages/Admin/admin.js"></script>
   </body>
 </html>

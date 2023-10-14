@@ -44,8 +44,8 @@ const quemadores = [
       descuento: 10,
       categoria: "quemadore",
       imagen: "/assets/images/Quemadores/carni-pump-instant.png",
-    },
-  ];
+    }, 
+];
 
 for (let i = 0; i < 4; i++) {
   creatinas.forEach((crea) => {

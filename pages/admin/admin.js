@@ -57,6 +57,16 @@ function pintarProductos(x) {
       <td>${prod.descripcion}</td>
       <td>${prod.categoria}</td>
       <td><img src="/assets/images/Creatinas/creatina-creapure.png" alt="" style="width: 70px;"></td>
+      <td>
+      <div class='d-flex gap-1'>
+        <button class='btn btn-sm btn-danger'>
+            <i class="fa-solid fa-trash"></i>
+        </button>
+        <button class='btn btn-sm btn-success'>
+        <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      </div>
+      </td>
       </tr>`;
   });
 }

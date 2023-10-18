@@ -35,6 +35,7 @@ formularioProductosHTML.addEventListener("submit", (event) => {
     id: "some",
     nombre: el.nombreProducto.value,
     descripcion: el.descripcionProducto.value,
+    imagen: el.imagenProducto.value,
     precio: el.precioProducto.valueAsNumber,
     fabricante: el.fabricanteProducto.value,
     categoria: el.categoriaProducto.value,
@@ -46,20 +47,26 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   pintarProductos(productos);
 });
 
+const borrarProducto = (index) => {
+  console.log('x')
+  productos.splice(index, 1)
+  pintarProductos(productos)
+}
+
 function pintarProductos(x) {
   tableBodyHTML.innerHTML = " ";
 
-  x.forEach((prod) => {
+  x.forEach((prod, index) => {
     tableBodyHTML.innerHTML += `
     <tr>
       <td>${prod.nombre}</td>
       <td>$${prod.precio}</td>
       <td>${prod.descripcion}</td>
       <td>${prod.categoria}</td>
-      <td><img src="/assets/images/Creatinas/creatina-creapure.png" alt="" style="width: 70px;"></td>
+      <td><img src="${prod.imagen}" alt="${prod.nombre}" style="width: 70px;"></td>
       <td>
       <div class='d-flex gap-1'>
-        <button class='btn btn-sm btn-danger'>
+        <button class='btn btn-sm btn-danger btn-delete' onclick="borrarProducto('${prod.id}')">
             <i class="fa-solid fa-trash"></i>
         </button>
         <button class='btn btn-sm btn-success'>
@@ -69,4 +76,7 @@ function pintarProductos(x) {
       </td>
       </tr>`;
   });
+
+
+
 }

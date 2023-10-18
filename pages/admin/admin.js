@@ -1,5 +1,6 @@
 const tableBodyHTML = document.getElementById("tableBody");
 const formularioProductosHTML = document.getElementById("formularioProductos");
+const btn = document.querySelector('button.btn[type="submit"]')
 
 const productos = [
   {
@@ -26,10 +27,20 @@ const productos = [
 
 pintarProductos(productos);
 
+let idEditar;
+
 formularioProductosHTML.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const el = formularioProductosHTML.elements;
+
+  let id;
+
+  if (idEditar) {
+    id = idEditar
+  } else {
+    id = crypto.randomUUID()
+  }
 
   const nuevoProducto = {
     id: "some",
@@ -41,16 +52,62 @@ formularioProductosHTML.addEventListener("submit", (event) => {
     categoria: el.categoriaProducto.value,
   };
 
+  if (idEditar) {
+    const index = productos.findIndex(prod => {
+      return prod.id === idEditar
+    })
+
+    productos[index] = nuevoProducto;
+
+    idEditar = undefined;
+
+    
+    btn.innerText = "Agregar Producto"
+    btn.classList.remove("btn-success")
+  }else{
+    productos.push(nuevoProducto);
+  }
+
   console.log(nuevoProducto);
-  productos.push(nuevoProducto);
 
   pintarProductos(productos);
+
+  formularioProductosHTML.reset()
+  el.nombreProducto.focus()
 });
 
 const borrarProducto = (index) => {
   console.log('x')
   productos.splice(index, 1)
   pintarProductos(productos)
+}
+
+const editarProducto = (idRecibido) => {
+  const prodEditar = productos.find(prod => {
+    if (prod.id === idRecibido) {
+      return true
+    }
+  })
+
+  if (!prodEditar) return;
+
+  idEditar = prodEditar.id
+
+  const elements = formularioProductosHTML.elements;
+
+  elements.nombreProducto.value = prodEditar.nombre;
+  elements.precioProducto.value = prodEditar.precio;
+  elements.categoriaProducto.value = prodEditar.categoria;
+  elements.imagenProducto.value = prodEditar.imagen;
+  elements.descripcionProducto.value = prodEditar.descripcion;
+  elements.fabricanteProducto.value = prodEditar.fabricante;
+
+  elements.nombreProducto.focus()
+
+  btn.innerText = "Editar Producto"
+  btn.classList.add("btn-success")
+
+
 }
 
 function pintarProductos(x) {
@@ -69,7 +126,7 @@ function pintarProductos(x) {
         <button class='btn btn-sm btn-danger btn-delete' onclick="borrarProducto('${prod.id}')">
             <i class="fa-solid fa-trash"></i>
         </button>
-        <button class='btn btn-sm btn-success'>
+        <button class='btn btn-sm btn-success' onclick="editarProducto('${prod.id}')">
         <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </div>

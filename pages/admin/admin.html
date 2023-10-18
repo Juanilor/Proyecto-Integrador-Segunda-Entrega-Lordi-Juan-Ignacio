@@ -1,205 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <title>Admin - ZonaSport</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="navbar navbar-expand-md main-navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <img
-              src="/assets/images/Logo-deportivo.png!w700wp"
-              class="main-logo"
-            />ZonaSport <span class="text-primary text-center">WIP</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Admin - ZonaSport</title>
+</head>
+
+<body>
+  <header class="main-header container-fluid">
+    <nav class="navbar navbar-expand-md main-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/assets/images/Logo-deportivo.png!w700wp" class="main-logo" />ZonaSport <span
+            class="text-primary text-center">WIP</span>
+        </a>
+        <div class="main-navbar-toggler-btns justify-content-evenly justify-content-xl-start">
+          <a href="">
+            <i class="fa-solid fa-cart-shopping"></i>
           </a>
-          <div
-            class="main-navbar-toggler-btns justify-content-evenly justify-content-xl-start"
-          >
-            <a href="">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="custom-toggler-icon"
-                ><i class="fa-solid fa-bars"></i
-              ></span>
-            </button>
-          </div>
-          <div
-            class="collapse navbar-collapse text-center"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/contact/contact.html"
-                  >Contacto</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/register/register.html"
-                  >Registro</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/About-Us/about-us.html"
-                  >Sobre Nosotros</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/pages/Admin/admin.html"
-                  >Admin</a
-                >
-              </li>
-              <li class="nav-item d-md-none">
-                <div
-                  class="user-div d-flex w-100 justify-content-between align-items-center"
-                >
-                  <span class="user-name"> Jhon Doe </span>
-                  <div
-                    class="user-icon d-flex align-items-center justify-content-center d-md-none"
-                  >
-                    <i class="fa-solid fa-user"></i>
-                  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="custom-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/register/register.html">Registro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/About-Us/about-us.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/pages/Admin/admin.html">Admin</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <div class="user-div d-flex w-100 justify-content-between align-items-center">
+                <span class="user-name"> Jhon Doe </span>
+                <div class="user-icon d-flex align-items-center justify-content-center d-md-none">
+                  <i class="fa-solid fa-user"></i>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!----------------------------------------------------------------------->
-
-    <main class="container-xl">
-      <div class="row border my-4 p-3">
-        <div class="col-12 col-md-6">
-          <form class="mb-3 w-100" id="formularioProductos">
-            <div class="mb-3">
-              <label for="nombreProducto" class="form-label"
-                >Nombre del Producto</label
-              >
-              <input
-                name="nombreProducto"
-                type="text"
-                class="form-control"
-                id="nombreProducto"
-                placeholder="Whey Protein"
-                minlength="3"
-                maxlength="30"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="fabricanteProducto" class="form-label"
-                >Fabricante del Producto</label
-              >
-              <input
-                name="fabricanteProducto"
-                type="text"
-                class="form-control"
-                id="fabricanteProducto"
-                placeholder="MM Supplements"
-                minlength="3"
-                maxlength="30"
-                required
-              />
-            </div>
-            <div class="d-flex mb-3 gap-3">
-              <div class="w-100">
-                <label for="precioProducto" class="form-label">Precio</label>
-                <input
-                  name="precioProducto"
-                  type="number"
-                  class="form-control"
-                  id="precioProducto"
-                  placeholder="10000"
-                  max="100000"
-                  min="1"
-                  step="0.01"
-                  required
-                />
               </div>
-              <div class="w-100">
-                <label for="categoriaProducto" class="form-label"
-                  >Categoria</label
-                >
-                <select
-                  class="form-select mx-2"
-                  name="categorias"
-                  id="categoriaProducto"
-                  required
-                >
-                  <option value="Creatinas">Creatinas</option>
-                  <option value="Proteinas">Proteinas</option>
-                  <option value="Vitaminas">Vitaminas</option>
-                  <option value="Aminoacidos">Aminoácidos</option>
-                </select>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="imagenProducto" class="form-label"
-                >Imagen del Producto</label
-              >
-              <input
-                name="imagenProducto"
-                type="url"
-                class="form-control"
-                id="imagenProducto"
-                placeholder="https://google.com.ar"
-                minlength="3"
-                maxlength="300"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="descripcionProducto" class="form-label"
-                >Descripcion del producto</label
-              >
-              <textarea
-                name="descripcion"
-                class="form-control"
-                id="descripcionProducto"
-                rows="3"
-                required
-                minlength="8"
-                maxlength="400"
-                placeholder="Descripción del producto..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary mb-3">
-              Agregar producto
-            </button>
-          </form>
+            </li>
+          </ul>
         </div>
-        <div class="col-12 col-md-6">
+      </div>
+    </nav>
+  </header>
+
+  <!----------------------------------------------------------------------->
+
+  <main class="container-xl">
+    <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#formModal">
+      Añadir
+    </button>
+    <div class="row border my-4 p-3">
+      <div class="col-12 col-md-12">
+        <div class="table-responsive-md">
           <table class="table table-dark table-striped">
             <thead>
               <tr>
@@ -215,14 +86,73 @@
           </table>
         </div>
       </div>
-    </main>
+    </div>
 
-    <!--==============================Bootstrap Script===============================-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/pages/Admin/admin.js"></script>
-  </body>
+    <div class="modal fade mt-5" id="formModal" tabindex="-1" aria-labelledby="modalFormularioProductos"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form class="mb-3 w-100" id="formularioProductos">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalFormularioProductos">Ingrese/Modifique su Producto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                <input name="nombreProducto" type="text" class="form-control" id="nombreProducto"
+                  placeholder="Whey Protein" minlength="3" maxlength="30" required />
+              </div>
+              <div class="mb-3">
+                <label for="fabricanteProducto" class="form-label">Fabricante del Producto</label>
+                <input name="fabricanteProducto" type="text" class="form-control" id="fabricanteProducto"
+                  placeholder="MM Supplements" minlength="3" maxlength="30" required />
+              </div>
+              <div class="d-flex mb-3 gap-3">
+                <div class="w-100">
+                  <label for="precioProducto" class="form-label">Precio</label>
+                  <input name="precioProducto" type="number" class="form-control" id="precioProducto"
+                    placeholder="10000" max="100000" min="1" step="0.01" required />
+                </div>
+                <div class="w-100">
+                  <label for="categoriaProducto" class="form-label">Categoria</label>
+                  <select class="form-select mx-2" name="categorias" id="categoriaProducto" required>
+                    <option value="Creatinas">Creatinas</option>
+                    <option value="Proteinas">Proteinas</option>
+                    <option value="Vitaminas">Vitaminas</option>
+                    <option value="Aminoacidos">Aminoácidos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="imagenProducto" class="form-label">Imagen del Producto</label>
+                <input name="imagenProducto" type="url" class="form-control" id="imagenProducto"
+                  placeholder="https://google.com.ar" minlength="3" maxlength="300" required />
+              </div>
+              <div class="mb-3">
+                <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
+                <textarea name="descripcion" class="form-control" id="descripcionProducto" rows="3" required
+                  minlength="8" maxlength="400" placeholder="Descripción del producto..."></textarea>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary mb-3">
+                Agregar producto
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--==============================Bootstrap Script===============================-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="/pages/Admin/admin.js"></script>
+</body>
+
 </html>

@@ -2,18 +2,20 @@ const tableBodyHTML = document.getElementById("tableBody");
 const formularioProductosHTML = document.getElementById("formularioProductos");
 const btn = document.querySelector('button.btn[type="submit"]')
 
-const productos = [
+const productosPrimerInicio = [
   {
+    id: 1,
     nombre: "Creatina (Creapure®) - 300g",
     fabricante: "MM Supplements",
     descripcion:
-      "Creatina (Creapure®) de MASmusculo Supplements. Estafórmula avanzada te ofrece el impulso necesario para alcanzar tus metas deportivas. Descubre cómo este complemento alimenticio de creatina monohidrato.",
+    "Creatina (Creapure®) de MASmusculo Supplements. Estafórmula avanzada te ofrece el impulso necesario para alcanzar tus metas deportivas. Descubre cómo este complemento alimenticio de creatina monohidrato.",
     precio: 3500,
     descuento: 15,
     categoria: "Creatinas",
     imagen: "/assets/images/Creatinas/creatina-creapure.png",
   },
   {
+    id: 2,
     nombre: "Creatina monohidrato 200 mesh - 500G",
     fabricante: "Iron Addict Labs",
     descripcion:
@@ -25,8 +27,14 @@ const productos = [
   },
 ];
 
-pintarProductos(productos);
 
+let productos = JSON.parse(localStorage.getItem('productos')) || productosPrimerInicio
+
+if(JSON.parse(localStorage.getItem(productos)) === null){
+  localStorage.setItem('productos', JSON.stringify(productos))
+}
+
+pintarProductos(productos);
 let idEditar;
 
 formularioProductosHTML.addEventListener("submit", (event) => {
@@ -43,7 +51,7 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   }
 
   const nuevoProducto = {
-    id: "some",
+    id: id,
     nombre: el.nombreProducto.value,
     descripcion: el.descripcionProducto.value,
     imagen: el.imagenProducto.value,
@@ -71,6 +79,7 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   console.log(nuevoProducto);
 
   pintarProductos(productos);
+  localStorage.setItem('productos', JSON.stringify(productos))
 
   formularioProductosHTML.reset()
   el.nombreProducto.focus()
@@ -80,6 +89,7 @@ const borrarProducto = (index) => {
   console.log('x')
   productos.splice(index, 1)
   pintarProductos(productos)
+  localStorage.setItem('productos', JSON.stringify(productos))
 }
 
 const editarProducto = (idRecibido) => {
@@ -127,7 +137,7 @@ function pintarProductos(x) {
             <i class="fa-solid fa-trash"></i>
         </button>
         <button class='btn btn-sm btn-success' onclick="editarProducto('${prod.id}')">
-        <i class="fa-solid fa-pen-to-square"></i>
+        <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#formModal"></i>
         </button>
       </div>
       </td>

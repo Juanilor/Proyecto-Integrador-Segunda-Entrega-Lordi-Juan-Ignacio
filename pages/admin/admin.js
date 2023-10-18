@@ -1,6 +1,7 @@
 const tableBodyHTML = document.getElementById("tableBody");
 const formularioProductosHTML = document.getElementById("formularioProductos");
 const btn = document.querySelector('button.btn[type="submit"]')
+const inputFiltrar = document.getElementById('filtrarProducto')
 
 const productosPrimerInicio = [
   {
@@ -8,7 +9,7 @@ const productosPrimerInicio = [
     nombre: "Creatina (Creapure®) - 300g",
     fabricante: "MM Supplements",
     descripcion:
-    "Creatina (Creapure®) de MASmusculo Supplements. Estafórmula avanzada te ofrece el impulso necesario para alcanzar tus metas deportivas. Descubre cómo este complemento alimenticio de creatina monohidrato.",
+      "Creatina (Creapure®) de MASmusculo Supplements. Estafórmula avanzada te ofrece el impulso necesario para alcanzar tus metas deportivas. Descubre cómo este complemento alimenticio de creatina monohidrato.",
     precio: 3500,
     descuento: 15,
     categoria: "Creatinas",
@@ -30,7 +31,7 @@ const productosPrimerInicio = [
 
 let productos = JSON.parse(localStorage.getItem('productos')) || productosPrimerInicio
 
-if(JSON.parse(localStorage.getItem(productos)) === null){
+if (JSON.parse(localStorage.getItem(productos)) === null) {
   localStorage.setItem('productos', JSON.stringify(productos))
 }
 
@@ -69,10 +70,10 @@ formularioProductosHTML.addEventListener("submit", (event) => {
 
     idEditar = undefined;
 
-    
+
     btn.innerText = "Agregar Producto"
     btn.classList.remove("btn-success")
-  }else{
+  } else {
     productos.push(nuevoProducto);
   }
 
@@ -144,6 +145,21 @@ function pintarProductos(x) {
       </tr>`;
   });
 
-
-
 }
+
+inputFiltrar.addEventListener('keyup', (evt) => {
+  
+  const busqueda = evt.target.value.toLowerCase();
+
+  const resultado = productos.filter(prod => {
+
+    const titulo = prod.nombre.toLowerCase()
+
+    if(titulo.includes(busqueda)){
+      return true
+    }
+    return false
+    
+  })
+  pintarProductos(resultado)
+})

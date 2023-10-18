@@ -10,11 +10,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/pages/admin/admin.css" />
   <title>Admin - ZonaSport</title>
 </head>
 
 <body>
-  <header class="main-header container-fluid">
+  <header class="main-header container-fluid g-0">
     <nav class="navbar navbar-expand-md main-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="/index.html">
@@ -64,12 +65,17 @@
 
   <!----------------------------------------------------------------------->
 
-  <main class="container-xl">
-    <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#formModal">
-      Añadir
-    </button>
+  <main class="container-xl g-0">
+      <button type="button" class="btn btn-primary position-relative mt-4 start-md-50  btn-modal" data-bs-toggle="modal" data-bs-target="#formModal">
+        Añadir
+      </button>
     <div class="row border my-4 p-3">
       <div class="col-12 col-md-12">
+        <div class="mb-3">
+          <label for="filtrarProducto" class="form-label">Filtrar Producto</label>
+          <input name="filtrarProducto" type="text" class="form-control" id="filtrarProducto"
+            placeholder="Whey Protein" minlength="3" maxlength="30" required />
+        </div>
         <div class="table-responsive-md">
           <table class="table table-dark table-striped">
             <thead>
@@ -88,7 +94,7 @@
       </div>
     </div>
 
-    <div class="modal fade mt-5" id="formModal" tabindex="-1" aria-labelledby="modalFormularioProductos"
+    <div class="modal fade modalForm" id="formModal" tabindex="-1" aria-labelledby="modalFormularioProductos"
       aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -138,7 +144,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary mb-3">
+              <button type="submit" class="btn mb-3 btn-modal">
                 Agregar producto
               </button>
             </div>

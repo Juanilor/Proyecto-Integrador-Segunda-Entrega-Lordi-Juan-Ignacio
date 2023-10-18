@@ -1,0 +1,20 @@
+
+:root {
+    --primaryColor: #fdff00;
+    --secondaryColor: #336666;
+    --tertiaryColor: #99b333;
+    --fourtColor: #fdff39;
+    --lightColor: #feff72;
+    --darkColor: #3f3f3f;
+  }
+  
+
+
+.modalForm{
+    top: 70px;
+}
+
+.btn-modal{
+    background-color: var(--secondaryColor);
+    color: #fff;
+}

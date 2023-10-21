@@ -1,11 +1,11 @@
 const tableBodyHTML = document.getElementById("tableBody");
 const formularioProductosHTML = document.getElementById("formularioProductos");
-const btn = document.querySelector('button.btn[type="submit"]')
-const inputFiltrar = document.getElementById('filtrarProducto')
+const btn = document.querySelector('button.btn[type="submit"]');
+const inputFiltrar = document.getElementById("filtrarProducto");
 
 const productosPrimerInicio = [
   {
-    id: 1,
+    id: crypto.randomUUID(),
     nombre: "Creatina (Creapure®) - 300g",
     fabricante: "MM Supplements",
     descripcion:
@@ -13,10 +13,10 @@ const productosPrimerInicio = [
     precio: 3500,
     descuento: 15,
     categoria: "Creatinas",
-    imagen: "/assets/images/Creatinas/creatina-creapure.png",
+    imagen: "https://www.masmusculo.com/106996-thickbox_default/creatina-creapure.jpg",
   },
   {
-    id: 2,
+    id: crypto.randomUUID(),
     nombre: "Creatina monohidrato 200 mesh - 500G",
     fabricante: "Iron Addict Labs",
     descripcion:
@@ -24,15 +24,37 @@ const productosPrimerInicio = [
     precio: 2900,
     descuento: 45,
     categoria: "Creatinas",
-    imagen: "/assets/images/Creatinas/creatina-monohidrato.png",
+    imagen: "https://www.masmusculo.com/107265-thickbox_default/addict-creatina-300g.jpg",
+  },
+  {
+    id: crypto.randomUUID(),
+    nombre: "L-CARNITINA 3.0 2000 MG",
+    subTitulo: "MM Supplements | L-Carnitina",
+    descripcion:
+      "  L-Carnitina 3.0 de MASmusculo Supplements, es un complemento alimenticio compuesto por una fórmula a base de l-carnitina de óptima calidad y rápida absorción.",
+    precio: 2800,
+    descuento: 30,
+    categoria: "Quemadores",
+    imagen: "https://www.masmusculo.com/51513-thickbox_default/l-carnitina.webp",
+  },
+  {
+    id: crypto.randomUUID(),
+    nombre: "CARNI PUMP INSTANT 3000",
+    subTitulo: "Bull Sport Nutrition | L-Carnitina",
+    descripcion:
+      " Carni Pump Instant 3000 de Bull Sport Nutrition es un  complemento alimenticio que ofrece L-carnitina y          L-arginina, dos aminoácidos indispensables para respaldar la capacidad física durante el entrenamiento",
+    precio: 4900,
+    descuento: 10,
+    categoria: "Quemadores",
+    imagen: "https://www.masmusculo.com/70479-thickbox_default/carni-pump-instant.webp",
   },
 ];
 
-
-let productos = JSON.parse(localStorage.getItem('productos')) || productosPrimerInicio
+let productos =
+  JSON.parse(localStorage.getItem("productos")) || productosPrimerInicio;
 
 if (JSON.parse(localStorage.getItem(productos)) === null) {
-  localStorage.setItem('productos', JSON.stringify(productos))
+  localStorage.setItem("productos", JSON.stringify(productos));
 }
 
 pintarProductos(productos);
@@ -46,9 +68,9 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   let id;
 
   if (idEditar) {
-    id = idEditar
+    id = idEditar;
   } else {
-    id = crypto.randomUUID()
+    id = crypto.randomUUID();
   }
 
   const nuevoProducto = {
@@ -62,17 +84,16 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   };
 
   if (idEditar) {
-    const index = productos.findIndex(prod => {
-      return prod.id === idEditar
-    })
+    const index = productos.findIndex((prod) => {
+      return prod.id === idEditar;
+    });
 
     productos[index] = nuevoProducto;
 
     idEditar = undefined;
 
-
-    btn.innerText = "Agregar Producto"
-    btn.classList.remove("btn-success")
+    btn.innerText = "Agregar Producto";
+    btn.classList.remove("btn-success");
   } else {
     productos.push(nuevoProducto);
   }
@@ -80,30 +101,32 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   console.log(nuevoProducto);
 
   pintarProductos(productos);
-  localStorage.setItem('productos', JSON.stringify(productos))
+  localStorage.setItem("productos", JSON.stringify(productos));
 
-  formularioProductosHTML.reset()
-  el.nombreProducto.focus()
+  formularioProductosHTML.reset();
+  el.nombreProducto.focus();
 });
 
 const borrarProducto = (index) => {
-  console.log('x')
-  productos.splice(index, 1)
-  pintarProductos(productos)
-  localStorage.setItem('productos', JSON.stringify(productos))
-}
+  console.log("x");
+  productos.splice(index, 1);
+  localStorage.setItem("productos", JSON.stringify(productos));
+  pintarProductos(productos);
+};
 
 const editarProducto = (idRecibido) => {
-  const prodEditar = productos.find(prod => {
+  const prodEditar = productos.find((prod) => {
     if (prod.id === idRecibido) {
-      return true
+      console.log('s')
+      return true;
     }
-  })
+  });
 
   if (!prodEditar) return;
 
-  idEditar = prodEditar.id
+  idEditar = prodEditar.id;
 
+  
   const elements = formularioProductosHTML.elements;
 
   elements.nombreProducto.value = prodEditar.nombre;
@@ -112,14 +135,12 @@ const editarProducto = (idRecibido) => {
   elements.imagenProducto.value = prodEditar.imagen;
   elements.descripcionProducto.value = prodEditar.descripcion;
   elements.fabricanteProducto.value = prodEditar.fabricante;
-
-  elements.nombreProducto.focus()
-
-  btn.innerText = "Editar Producto"
-  btn.classList.add("btn-success")
-
-
-}
+  
+  
+  
+  btn.innerText = "Editar Producto";
+  btn.classList.add("btn-success");
+};
 
 function pintarProductos(x) {
   tableBodyHTML.innerHTML = " ";
@@ -137,29 +158,25 @@ function pintarProductos(x) {
         <button class='btn btn-sm btn-danger btn-delete' onclick="borrarProducto('${prod.id}')">
             <i class="fa-solid fa-trash"></i>
         </button>
-        <button class='btn btn-sm btn-success' onclick="editarProducto('${prod.id}')">
-        <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#formModal"></i>
+        <button class='btn btn-sm btn-success' onclick="editarProducto('${prod.id}')" data-bs-toggle="modal" data-bs-target="#formModal">
+        <i class="fa-solid fa-pen-to-square" ></i>
         </button>
       </div>
       </td>
       </tr>`;
   });
-
 }
 
-inputFiltrar.addEventListener('keyup', (evt) => {
-  
+inputFiltrar.addEventListener("keyup", (evt) => {
   const busqueda = evt.target.value.toLowerCase();
 
-  const resultado = productos.filter(prod => {
+  const resultado = productos.filter((prod) => {
+    const titulo = prod.nombre.toLowerCase();
 
-    const titulo = prod.nombre.toLowerCase()
-
-    if(titulo.includes(busqueda)){
-      return true
+    if (titulo.includes(busqueda)) {
+      return true;
     }
-    return false
-    
-  })
-  pintarProductos(resultado)
-})
+    return false;
+  });
+  pintarProductos(resultado);
+});

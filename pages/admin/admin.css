@@ -8,7 +8,9 @@
     --darkColor: #3f3f3f;
   }
   
-
+body{
+    background-color: var(--darkColor);
+}
 
 .modalForm{
     top: 70px;
@@ -17,4 +19,15 @@
 .btn-modal{
     background-color: var(--secondaryColor);
     color: #fff;
+border: none;
+}
+.btn-modal:hover{
+    background-color: var(--darkColor);
+    border: 1px solid var(--primaryColor);
+}
+
+
+.tableBody{
+    color: var(--primaryColor);
+    overflow: scroll;
 }

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/pages/register/register.css" />
     <title>Register - ZonaSport</title>
   </head>
-  <body>
+  <body class="">
 
       <!--================================ Header Area ============-->
     <header class="main-header">
@@ -103,7 +103,7 @@
         <div class="main-container contact-main-container px-0 w-75 mx-auto">
           <h4 class="text-center w-100 mb-4 mt-4">Formulario de Registro</h4>
           <form
-            action=""
+            id="registerForm"
             class="w-100 "
           >
             <div class="input-box">
@@ -204,14 +204,14 @@
 
             <div class="input-box d-flex align-items-center flex-column">
               <div class="text-center pt-3 input-box my-2">
-                <label for="inputBird" class="col-form-labe w-100"
+                <label for="inputBirthdate" class="col-form-labe w-100"
                   >Fecha de Nacimiento</label
                 >
               </div>
               <div class=" mx-auto text-secondary .input-container ">
                 <input
                   type="date"
-                  id="inputBirtday"
+                  id="inputBirthdate"
                   class="form-control"
                   min="1950-08-28"
                   max="2023-08-28"
@@ -224,40 +224,40 @@
 
             <div class="input-box ">
               <div class="text-center pt-3 input-box">
-                <label for="provincias-select" class="col-form-label"
+                <label for="inputLocation" class="col-form-label"
                   >Selecione su Provincia</label
                 >
               </div>
               <div class="w-md-50 mx-auto text-secondary">
                 <select
-                  name="provincias-select"
-                  id="provincias-select"
+                  name="inputLocation"
+                  id="inputLocation"
                   class="form-select"
                 >
-                  <option value="santa-fe" selected>Provincias</option>
-                  <option value="buenos-aires">Buenos Aires</option>
-                  <option value="santa-fe">Catamarca</option>
-                  <option value="santa-fe">Chaco</option>
-                  <option value="santa-fe">Chubut</option>
-                  <option value="santa-fe">Cordoba</option>
-                  <option value="santa-fe">Corrientes</option>
-                  <option value="santa-fe">Entre Rios</option>
-                  <option value="santa-fe">Formosa</option>
-                  <option value="santa-fe">Jujui</option>
-                  <option value="santa-fe">La Pampa</option>
-                  <option value="santa-fe">La Rioja</option>
-                  <option value="santa-fe">Mendoza</option>
-                  <option value="santa-fe">Misiones</option>
-                  <option value="santa-fe">Neuquen</option>
-                  <option value="santa-fe">Rio Negro</option>
-                  <option value="santa-fe">Salta</option>
-                  <option value="santa-fe">San Juan</option>
-                  <option value="santa-fe">San Luis</option>
-                  <option value="santa-fe">Santa Cruz</option>
-                  <option value="santa-fe">Santa Fe</option>
-                  <option value="santa-fe">Santiago Del Estero</option>
-                  <option value="santa-fe">Tierra Del Fuego</option>
-                  <option value="santa-fe">Tucuman</option>
+                  <option value="" selected>Provincias</option>
+                  <option value="Buenos  Aires">Buenos Aires</option>
+                  <option value="Catamarca">Catamarca</option>
+                  <option value="Chaco">Chaco</option>
+                  <option value="Chubut">Chubut</option>
+                  <option value="Cordoba">Cordoba</option>
+                  <option value="Corrientes">Corrientes</option>
+                  <option value="Entre Rios">Entre Rios</option>
+                  <option value="Formosa">Formosa</option>
+                  <option value="Jujui">Jujui</option>
+                  <option value="La Pampa">La Pampa</option>
+                  <option value="La Rioja">La Rioja</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Misiones">Misiones</option>
+                  <option value="Neuquen">Neuquen</option>
+                  <option value="Rio Negro">Rio Negro</option>
+                  <option value="Salta">Salta</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Luis">San Luis</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Santiago Del Estero">Santiago Del Estero</option>
+                  <option value="Tierra Del Fuego">Tierra Del Fuego</option>
+                  <option value="Tucuman">Tucuman</option>
                 </select>
               </div>
 
@@ -313,5 +313,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="/pages/register/register.js"></script>
   </body>
 </html>

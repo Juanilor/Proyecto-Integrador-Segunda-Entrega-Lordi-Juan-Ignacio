@@ -29,7 +29,7 @@ const productosPrimerInicio = [
   {
     id: crypto.randomUUID(),
     nombre: "L-CARNITINA 3.0 2000 MG",
-    subTitulo: "MM Supplements | L-Carnitina",
+    fabricante: "MM Supplements | L-Carnitina",
     descripcion:
       "  L-Carnitina 3.0 de MASmusculo Supplements, es un complemento alimenticio compuesto por una fórmula a base de l-carnitina de óptima calidad y rápida absorción.",
     precio: 2800,
@@ -40,7 +40,7 @@ const productosPrimerInicio = [
   {
     id: crypto.randomUUID(),
     nombre: "CARNI PUMP INSTANT 3000",
-    subTitulo: "Bull Sport Nutrition | L-Carnitina",
+    fabricante: "Bull Sport Nutrition | L-Carnitina",
     descripcion:
       " Carni Pump Instant 3000 de Bull Sport Nutrition es un  complemento alimenticio que ofrece L-carnitina y          L-arginina, dos aminoácidos indispensables para respaldar la capacidad física durante el entrenamiento",
     precio: 4900,
@@ -53,7 +53,8 @@ const productosPrimerInicio = [
 let productos =
   JSON.parse(localStorage.getItem("productos")) || productosPrimerInicio;
 
-if (JSON.parse(localStorage.getItem(productos)) === null) {
+
+if (JSON.parse(localStorage.getItem(productos)) === null  ) {
   localStorage.setItem("productos", JSON.stringify(productos));
 }
 
@@ -172,8 +173,9 @@ inputFiltrar.addEventListener("keyup", (evt) => {
 
   const resultado = productos.filter((prod) => {
     const titulo = prod.nombre.toLowerCase();
+    const categoria = prod.categoria.toLowerCase();
 
-    if (titulo.includes(busqueda)) {
+    if (titulo.includes(busqueda) || categoria.includes(busqueda)) {
       return true;
     }
     return false;

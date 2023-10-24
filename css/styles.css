@@ -19,6 +19,7 @@ body {
 
 .user-name{
   color: white;
+  margin: 0 30px 0 0 ;
 }
 .main-header {
   position: sticky;
@@ -361,13 +362,3 @@ footer .box .icon-box i {
   color: white;
 }
 
-.user-icon{
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 100%;
-  border: 2px solid var(--secondaryColor);
-
-  background-color: var(--lightColor);
-}

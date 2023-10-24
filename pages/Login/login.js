@@ -26,6 +26,5 @@ formLogin.addEventListener("submit", (evt) => {
 
   setTimeout(function() {
     window.location.href = '/index.html'
-}, 10000)
-
+}, 2000)
 });

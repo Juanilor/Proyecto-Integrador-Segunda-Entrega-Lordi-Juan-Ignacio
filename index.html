@@ -56,7 +56,10 @@
             class="collapse navbar-collapse text-center"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-middle">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 align-middle"
+              id="nav-list"
+            >
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
                   >Inicio</a
@@ -68,33 +71,22 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/pages/register/register.html"
-                  >Registro</a
-                >
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="/pages/About-Us/about-us.html"
                   >Sobre Nosotros</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/Admin/admin.html"
-                  >Admin</a
-                >
-              </li>
-              <li class="nav-item d-md-none">
-                <div
-                  class="user-div d-flex w-100 justify-content-between align-items-center"
-                >
-                  <span class="user-name"> Jhon Doe </span>
-                  <div
-                    class="user-icon d-flex align-items-center justify-content-center d-md-none"
-                  >
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-              </li>
             </ul>
+            <div class="nav-item d-md-block align-self-md-center">
+              <div
+                class="user-div d-flex w-100 justify-content-between align-items-center"
+              >
+                <div class="user-name" id="userHeaderName"> Jhon Doe </div>
+                <div
+                  class="d-flex align-items-center justify-content-center " id="userActions"
+                >Login
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -240,7 +232,6 @@
         </div>
       </div>
       <!--==============================End Categories Area================================-->
-
 
       <!--==============================Carousel Destacados Area================================-->
 
@@ -444,17 +435,14 @@
             <div
               class="container-fluid d-flex py-3 justify-content-start row mx-0"
               id="creatinas-container"
-            >
-            
-          </div>
+            ></div>
           </div>
           <div class="ctg-section-container" id="nd-quem">
             <h4 class="section-subtitle text-center mx-auto">Quemadores</h4>
             <div
-              class="container-fluid d-flex py-3 justify-content-start row mx-0" id="quemadores-container"
-            >
-
-            </div>
+              class="container-fluid d-flex py-3 justify-content-start row mx-0"
+              id="quemadores-container"
+            ></div>
           </div>
         </section>
         <section class="cards-section p-3 pb-0 mx-0" id="proteinas">
@@ -820,5 +808,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/scripts.js"></script>
+    <script src="/js/userInfo.js"></script>
   </body>
 </html>

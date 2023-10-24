@@ -5,7 +5,6 @@ const quemContenedor = document.getElementById("quemadores-container");
 for(let i = 0; i <= 3; i++){
   productosStg.forEach(prod => {
     if(prod.categoria === 'Creatinas'){
-      console.log(prod)
       creaContenedor.innerHTML += `<div class="custom-card">
           <div class="card-header d-flex">
           <span class="card-discount card-discount-10"
@@ -36,7 +35,6 @@ for(let i = 0; i <= 3; i++){
       
     }
     if(prod.categoria === 'Quemadores'){
-      console.log(prod)
       quemContenedor.innerHTML += `<div class="custom-card">
           <div class="card-header d-flex">
           <span class="card-discount card-discount-10"

@@ -6,25 +6,28 @@ const usuariosPrimerInicio = [
     email: "admin@admin.com",
     password: "admin",
     localidad: undefined,
-    role: 'admin'
-  },  {
+    role: "admin",
+  },
+  {
     nombreCompleto: "Pedro Perez",
     email: "PedroP@correo.com",
     password: "1574adf",
-    localidad: 'Buenos Aires',
-    role: 'user'
-  },  {
+    localidad: "Buenos Aires",
+    role: "user",
+  },
+  {
     nombreCompleto: "Armando Paredes",
     email: "ParArmando@correo.com",
     password: "15daq12",
-    localidad: 'Salta',
-    role: 'user'
-  },{
+    localidad: "Salta",
+    role: "user",
+  },
+  {
     nombreCompleto: "Esteban Quitos",
     email: "naberseQuitos@correo.com",
     password: "15ddsaq1",
-    localidad: 'Jujui',
-    role: 'user'
+    localidad: "Jujui",
+    role: "user",
   },
 ];
 
@@ -41,13 +44,14 @@ registerForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
   const el = registerForm.elements;
+  const emailInput = evt.target.elements.inputEmail.value;
 
   const nuevoUsuario = {
     nombreCompleto: `${el.inputName.value} ${el.inputLastName.value}`,
     email: el.inputEmail.value,
     password: el.inputPassword.value,
     localidad: el.inputLocation.value,
-    role: 'user'
+    role: "user",
   };
 
   if (nuevoUsuario.password !== el.inputRepeatPassword.value) {
@@ -55,10 +59,21 @@ registerForm.addEventListener("submit", (evt) => {
     return;
   }
 
+  const emailExiste = usuarios.find((user) => {
+    if (user.email === emailInput) {
+      console.log("El Email ya existe en la base de datos");
+      return true;
+    }
+    return false;
+  });
 
-  usuarios.push(nuevoUsuario)
-  registerForm.reset();
+  if (!emailExiste) {
+    usuarios.push(nuevoUsuario);
+    registerForm.reset();
 
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-  console.log(nuevoUsuario);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    console.log(nuevoUsuario);
+  }else{
+    return
+  }
 });

@@ -31,3 +31,9 @@ border: none;
     color: var(--primaryColor);
     overflow: scroll;
 }
+
+
+.tdDesc{
+    max-width: 250px;
+    overflow-x: hidden;
+}

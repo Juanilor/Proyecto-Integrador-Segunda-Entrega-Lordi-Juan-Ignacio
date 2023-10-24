@@ -1,6 +1,7 @@
 const tableBodyHTML = document.getElementById("tableBody");
 const formularioProductosHTML = document.getElementById("formularioProductos");
 const btn = document.querySelector('button.btn[type="submit"]');
+const btn2 = document.querySelector('button.btn[type="button"]');
 const inputFiltrar = document.getElementById("filtrarProducto");
 
 const productosPrimerInicio = [
@@ -63,6 +64,7 @@ let idEditar;
 
 formularioProductosHTML.addEventListener("submit", (event) => {
   event.preventDefault();
+  
 
   const el = formularioProductosHTML.elements;
 
@@ -151,7 +153,7 @@ function pintarProductos(x) {
     <tr>
       <td>${prod.nombre}</td>
       <td>$${prod.precio}</td>
-      <td>${prod.descripcion}</td>
+      <td class='tdDesc'>${prod.descripcion}</td>
       <td>${prod.categoria}</td>
       <td><img src="${prod.imagen}" alt="${prod.nombre}" style="width: 70px;"></td>
       <td>
@@ -182,3 +184,7 @@ inputFiltrar.addEventListener("keyup", (evt) => {
   });
   pintarProductos(resultado);
 });
+
+btn2.addEventListener('click', () => {
+  formularioProductosHTML.reset();
+})

@@ -10,6 +10,7 @@ registerForm.addEventListener("submit", (evt) => {
   const emailInput = evt.target.elements.inputEmail.value;
 
   const nuevoUsuario = {
+    id: crypto.randomUUID(),
     nombreCompleto: `${el.inputName.value} ${el.inputLastName.value}`,
     email: el.inputEmail.value,
     password: el.inputPassword.value,
@@ -18,13 +19,14 @@ registerForm.addEventListener("submit", (evt) => {
   };
 
   if (nuevoUsuario.password !== el.inputRepeatPassword.value) {
-    console.log("Las contraseñas no coinciden");
+    Swal.fire("Error al introducir los datos", "Las contraseñas ingresada", "error");
     return;
   }
 
   const emailExiste = usuarios.find((user) => {
     if (user.email === emailInput) {
       console.log("El Email ya existe en la base de datos");
+      Swal.fire("Error al introducir los datos", "Es posible que los datos ingresados no sean validos", "error");
       return true;
     }
     return false;

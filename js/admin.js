@@ -4,14 +4,13 @@ const btn = document.querySelector('button.btn[type="submit"]');
 const btn2 = document.querySelector('button.btn[type="button"]');
 const inputFiltrar = document.getElementById("filtrarProducto");
 
-const productos = JSON.parse(localStorage.getItem("productos"))
+const productos = JSON.parse(localStorage.getItem("productos"));
 
 pintarProductos(productos);
 let idEditar;
 
 formularioProductosHTML.addEventListener("submit", (event) => {
   event.preventDefault();
-  
 
   const el = formularioProductosHTML.elements;
 
@@ -31,7 +30,7 @@ formularioProductosHTML.addEventListener("submit", (event) => {
     precio: el.precioProducto.valueAsNumber,
     fabricante: el.fabricanteProducto.value,
     categoria: el.categoriaProducto.value,
-    descuento: el.descuentoProducto.value
+    descuento: el.descuentoProducto.value,
   };
 
   if (idEditar) {
@@ -49,6 +48,12 @@ formularioProductosHTML.addEventListener("submit", (event) => {
     productos.push(nuevoProducto);
   }
 
+  Swal.fire({
+    icon: "success",
+    title: "Producto agregado/modificado correctamente",
+    text: "El producto se actualizo o modifico correctamente!",
+  });
+
   console.log(nuevoProducto);
 
   pintarProductos(productos);
@@ -58,16 +63,38 @@ formularioProductosHTML.addEventListener("submit", (event) => {
   el.nombreProducto.focus();
 });
 
-const borrarProducto = (index) => {
-  productos.splice(index, 1);
-  localStorage.setItem("productos", JSON.stringify(productos));
-  pintarProductos(productos);
+const borrarProducto = (idProducto) => {
+  Swal.fire({
+    title: "Desea borrar producto",
+    icon: "error",
+    text: "Realmente desea elminar el producto?",
+    showCloseButton: true,
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    confirmButtonText: "Borrar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const indiceEncontrado = productos.findIndex((productoFindIndex) => {
+        if (productoFindIndex.id === idProducto) {
+          return true;
+        }
+        return false;
+      });
+      productos.splice(indiceEncontrado, 1);
+
+      pintarProductos(productos);
+
+      localStorage.setItem("productos", JSON.stringify(productos));
+
+      Swal.fire("Borrado!", "Producto borrado correctamente", "success");
+    }
+  });
 };
 
 const editarProducto = (idRecibido) => {
   const prodEditar = productos.find((prod) => {
     if (prod.id === idRecibido) {
-      console.log('s')
+      console.log("s");
       return true;
     }
   });
@@ -76,7 +103,6 @@ const editarProducto = (idRecibido) => {
 
   idEditar = prodEditar.id;
 
-  
   const elements = formularioProductosHTML.elements;
 
   elements.nombreProducto.value = prodEditar.nombre;
@@ -85,9 +111,7 @@ const editarProducto = (idRecibido) => {
   elements.imagenProducto.value = prodEditar.imagen;
   elements.descripcionProducto.value = prodEditar.descripcion;
   elements.fabricanteProducto.value = prodEditar.fabricante;
-  
-  
-  
+
   btn.innerText = "Editar Producto";
   btn.classList.add("btn-success");
 };
@@ -133,6 +157,6 @@ inputFiltrar.addEventListener("keyup", (evt) => {
   pintarProductos(resultado);
 });
 
-btn2.addEventListener('click', () => {
+btn2.addEventListener("click", () => {
   formularioProductosHTML.reset();
-})
+});

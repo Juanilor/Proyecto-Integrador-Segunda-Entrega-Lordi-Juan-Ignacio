@@ -16,6 +16,8 @@ formLogin.addEventListener("submit", (evt) => {
   });
 
   if(!userExist || userExist.password !== password){
+    
+    Swal.fire("Error al introducir los datos", "Es posible que los datos ingresados no coincidan", "error");
     return
   }
   console.log(userExist.password)
@@ -23,6 +25,8 @@ formLogin.addEventListener("submit", (evt) => {
   delete userExist.password
     
   localStorage.setItem( "currentUser", JSON.stringify(userExist)   )
+ 
+  Swal.fire("Solicitud Aceptada", "En breve sera redirigido a nuestra pagina", "success");
 
   setTimeout(function() {
     window.location.href = '/index.html'

@@ -1,5 +1,6 @@
 const usuariosPrimerInicio = [
   {
+    id: crypto.randomUUID(),
     nombreCompleto: "admin",
     email: "admin@admin.com",
     password: "admin",
@@ -7,6 +8,7 @@ const usuariosPrimerInicio = [
     role: "admin",
   },
   {
+    id: crypto.randomUUID(),
     nombreCompleto: "Pedro Perez",
     email: "PedroP@correo.com",
     password: "1574adf",
@@ -14,6 +16,7 @@ const usuariosPrimerInicio = [
     role: "user",
   },
   {
+    id: crypto.randomUUID(),
     nombreCompleto: "Armando Paredes",
     email: "ParArmando@correo.com",
     password: "15daq12",
@@ -21,6 +24,7 @@ const usuariosPrimerInicio = [
     role: "user",
   },
   {
+    id: crypto.randomUUID(),
     nombreCompleto: "Esteban Quitos",
     email: "naberseQuitos@correo.com",
     password: "15ddsaq1",

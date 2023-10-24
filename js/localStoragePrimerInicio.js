@@ -85,6 +85,29 @@ const productosPrimerInicio = [
     imagen:
       "https://www.masmusculo.com/70479-thickbox_default/carni-pump-instant.webp",
   },
+    {
+    id: crypto.randomUUID(),
+    nombre: "WHEY GOLD STANDARD 2KG",
+    fabricante: "Optimum Nutrition",
+    descripcion:
+      " Whey Gold Standard de Optimum Nutrition es un suplemento de concentrado de suero de proteína de alta calidad. Las proteínas de Optimum Nutrition, contribuyen a que aumente la masa muscular y conservarla.",
+    precio: 9800,
+    descuento: 10,
+    categoria: "Proteinas S",
+    imagen:
+      "https://www.masmusculo.com/72069-thickbox_default/100-whey-gold-standard-5-lb-23kg.jpg",
+  },
+  {
+    id: crypto.randomUUID(),
+    nombre: "WHEY PROTEIN80 - 2KG",
+    fabricante: "MM Supplements | Whey Protein",
+    descripcion: '  Whey Protein80 de MM Supplements es un producto alimenticio a base de proteína de suero de leche ultrafiltrado, enriquecido además con aislado de suero de leche, de la mejor materia prima Lacprodan® de Arla Foods, que aporta más de 22 gramos de proteína por servicio. Gracias a su procesado a baja temperatura, se asegura que el producto contenga la mayor cantidad de sus cualidades nutritivas, intactas.',
+    precio: 6800,
+    descuento: 40,
+    categoria: "Proteinas S",
+    imagen:
+      "https://www.masmusculo.com/106219-thickbox_default/whey-protein80-2-kg.jpg",
+  },
 ];
 
 let productos =

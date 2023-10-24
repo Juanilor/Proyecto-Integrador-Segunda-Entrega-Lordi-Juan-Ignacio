@@ -1,6 +1,6 @@
 const registerForm = document.getElementById("registerForm");
 
-const usuarios = JSON.parse(localStorage.getItem("usuarios"))
+const usuarios = JSON.parse(localStorage.getItem("usuarios"));
 console.dir(registerForm);
 
 registerForm.addEventListener("submit", (evt) => {
@@ -36,7 +36,7 @@ registerForm.addEventListener("submit", (evt) => {
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log(nuevoUsuario);
-  }else{
-    return
+  } else {
+    return;
   }
 });

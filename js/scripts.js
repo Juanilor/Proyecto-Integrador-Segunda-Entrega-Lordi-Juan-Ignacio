@@ -1,10 +1,9 @@
-const productos = JSON.parse(localStorage.getItem("productos"))
+const productosStg = JSON.parse(localStorage.getItem("productos"))
 const creaContenedor = document.getElementById("creatinas-container");
 const quemContenedor = document.getElementById("quemadores-container");
 
-console.log(productos);
 for(let i = 0; i <= 3; i++){
-  productos.forEach(prod => {
+  productosStg.forEach(prod => {
     if(prod.categoria === 'Creatinas'){
       console.log(prod)
       creaContenedor.innerHTML += `<div class="custom-card">
@@ -69,25 +68,4 @@ for(let i = 0; i <= 3; i++){
     }
   })
 
-}
-
-const usuariosPrimerInicio = [
-  {
-    nombreCompleto: 'admin',
-    email: 'admin@admin.com',
-    password: 'admin',
-    edad: 26,
-    location: undefined,
-    birthdate: undefined,
-  }
-]
-
-
-let usuarios =
-  JSON.parse(localStorage.getItem("usuarios")) ||usuariosPrimerInicio;
-
-  
-
-if (JSON.parse(localStorage.getItem(usuarios)) === null  ) {
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }

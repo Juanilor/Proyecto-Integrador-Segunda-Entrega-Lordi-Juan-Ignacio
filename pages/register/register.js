@@ -1,43 +1,6 @@
 const registerForm = document.getElementById("registerForm");
 
-const usuariosPrimerInicio = [
-  {
-    nombreCompleto: "admin",
-    email: "admin@admin.com",
-    password: "admin",
-    localidad: undefined,
-    role: "admin",
-  },
-  {
-    nombreCompleto: "Pedro Perez",
-    email: "PedroP@correo.com",
-    password: "1574adf",
-    localidad: "Buenos Aires",
-    role: "user",
-  },
-  {
-    nombreCompleto: "Armando Paredes",
-    email: "ParArmando@correo.com",
-    password: "15daq12",
-    localidad: "Salta",
-    role: "user",
-  },
-  {
-    nombreCompleto: "Esteban Quitos",
-    email: "naberseQuitos@correo.com",
-    password: "15ddsaq1",
-    localidad: "Jujui",
-    role: "user",
-  },
-];
-
-let usuarios =
-  JSON.parse(localStorage.getItem("usuarios")) || usuariosPrimerInicio;
-
-if (JSON.parse(localStorage.getItem(usuarios)) === null) {
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-}
-
+const usuarios = JSON.parse(localStorage.getItem("usuarios"))
 console.dir(registerForm);
 
 registerForm.addEventListener("submit", (evt) => {
